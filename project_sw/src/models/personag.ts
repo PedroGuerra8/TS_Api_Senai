@@ -5,3 +5,7 @@ export class Personagem {
     mass: string = "";
     personagens: Array<Personagem> = []
 };
+
+export class Gerenciamento {
+    state: boolean = false;
+}
