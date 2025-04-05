@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import { Personagem } from '@/models/personag';
 
-    const props = defineProps({
-        person: { type: Personagem, required: true },
-        showButtons: { type: Boolean, default: true }
-    });
+// Corrigindo o tipo da prop 'person' para ser uma instância de Personagem
+const props = defineProps({
+    person: { type: Personagem, required: true },
+    showButtons: { type: Boolean, default: true }
+});
 
-    const changeDevice = (newState: string)=> {
-        props.person.name = newState;
-    }
-    
+const changeDevice = (newState: string) => {
+    // Agora TypeScript sabe que `props.person` tem a propriedade `name`
+    props.person.name = newState;
+};
 </script>
 
 <template>
@@ -23,8 +24,8 @@ import { Personagem } from '@/models/personag';
             <h5>{{props.person.gender}}</h5>   
             <span class="icons material-icons-round">{{ props.person.personagens }}</span> 
             <div class="flex flex-row" v-if="props.showButtons">
-                <button class="device-buttons on-button mr-1" @click="changeDevice("name")">ON</button>
-                <button class="device-buttons off-button" @click="changeDevice("name")">OFF</button>
+                <button class="device-buttons on-button mr-1" @click="changeDevice('ON')">ON</button>
+                <button class="device-buttons off-button" @click="changeDevice('OFF')">OFF</button>
             </div>
         </div>
     </section>
