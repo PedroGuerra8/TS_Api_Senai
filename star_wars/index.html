@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars</title>
+
+
+  </head>
+  <body>
+
+    <div id="app">
+      <cart-display :cart='cart'></cart-display>
+      <person-display @add-to-cart="addToCart"></person-display>
+    </div>
+    
+
+    <script src="./components/Cart.vue"></script>
+    <script src="./components/Personagem.vue"></script>
+
+    <script>
+      app.mount('#app')
+    </script>
+  </body>
+</html>
