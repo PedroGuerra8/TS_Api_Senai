@@ -3,3 +3,7 @@ export class Personagem {
     idade: string = "";
     image: string = "";
 }
+
+export class Cart {
+    
+}

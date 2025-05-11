@@ -1,6 +1,6 @@
 <script setup lang="ts">
     import Cart from '@/components/Cart.vue';
-    import { Personagem } from '@/models/personagens'
+    import { Personagem } from '@/models/personagens';
     import { reactive, ref } from 'vue';
 
 

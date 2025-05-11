@@ -1,5 +1,7 @@
-<!-- src/components/Cart.vue -->
 <script setup lang="ts">
+import { Cart } from '@/models/personagens';
+import { Personagem } from '@/models/personagens';
+
 defineProps<{
   name: string
   idade: string
@@ -14,3 +16,7 @@ defineProps<{
     <p>Imagem: {{ image }}</p>
   </div>
 </template>
+
+<style>
+
+</style>

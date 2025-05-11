@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useRouter, useRoute, RouterView } from 'vue-router'
+import { ref, computed } from 'vue'
+import { RouterLink, useRouter, RouterView } from 'vue-router'
 
 const router = useRouter()
-const route = useRoute()
 
 const buttonRouteLabel = computed(() =>
-  route.name === 'personagem' ? 'Ir para Login' : 'Ir para Personagens'
+  router.currentRoute.value.name === 'personagem' ? 'Ir para Login' : 'Ir para Personagens'
 )
 
 const changePage = () => {
-  if (route.name === 'personagem') {
+  if (router.currentRoute.value.name === 'personagem') {
     router.push('/login')
   } else {
     router.push('/personagens')
