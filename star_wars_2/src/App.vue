@@ -1,26 +1,10 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { RouterLink, useRouter, RouterView } from 'vue-router'
-
-const router = useRouter()
-
-const buttonRouteLabel = computed(() =>
-  router.currentRoute.value.name === 'personagem' ? 'Ir para Login' : 'Ir para Personagens'
-)
-
-const changePage = () => {
-  if (router.currentRoute.value.name === 'personagem') {
-    router.push('/login')
-  } else {
-    router.push('/personagens')
-  }
-}
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <button @click="changePage" class="m-4 p-2 bg-blue-500 text-white rounded">
-    {{ buttonRouteLabel }}
-  </button>
+ 
+  
   <RouterView />
 </template>
 
@@ -87,4 +71,3 @@ nav a:first-of-type {
   }
 }
 </style>
-

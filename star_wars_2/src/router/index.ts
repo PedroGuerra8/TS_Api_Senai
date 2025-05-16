@@ -1,10 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Personagem from '@/views/Personagem.vue'
-import NotFound from '@/views/NotFound.vue'
 import Login from '@/views/Login.vue'
+import NotFound from '@/views/NotFound.vue'
+import Personagem from '@/views/Personagem.vue'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
-  history: createWebHistory(), // <- mais seguro assim
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',

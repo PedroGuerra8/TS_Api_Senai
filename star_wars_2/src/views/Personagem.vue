@@ -1,6 +1,7 @@
 <script setup lang="ts">
-    import Cart from '@/components/Cart.vue';
+    import PersonagemComponent from '@/components/PersonagemComponent.vue';
     import { Personagem } from '@/models/personagens';
+    
     import { reactive, ref } from 'vue';
 
 
@@ -17,7 +18,7 @@
         <h1>Personagens</h1>
         <section class="personagens flex flex-column border-round-sm">
             <div v-for="(personagem, env_id) in personagens" :key="env_id">
-                <Personagem :personagem="personagem"/>
+                <PersonagemComponent :personagem="personagem"/>
             </div> 
         </section>
     </main>
